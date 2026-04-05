@@ -1,0 +1,12 @@
+{
+  "installCommand": "npm install -g pnpm && pnpm install",
+  "buildCommand": "cd ../.. && BASE_PATH=/ pnpm --filter @workspace/salarn run build",
+  "outputDirectory": "artifacts/salarn/dist/public",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://4329a847-1da2-45db-a150-0c90bece5e10-00-2b8m8l83l7bh6.spock.replit.dev/api/:path*"
+    },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
